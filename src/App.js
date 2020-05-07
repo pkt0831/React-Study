@@ -8,14 +8,25 @@ const st = classNames.bind(style);
 
 class App extends Component {
   // eslint-disable-next-line class-methods-use-this
-  handleSubmitChange = () => {
+  handleId = () => {
     // eslint-disable-next-line no-console
     console.log('사용자 아이디 입력중');
   };
 
+  handlePw = () => {
+    // eslint-disable-next-line no-console
+    console.log('사용자 비밀번호 입력중');
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line no-console
+    console.log('로그인 시도중');
+  };
+
   render() {
     return (
-      <>
+      <div className={st('pad')}>
         <div>
           <h1>로그인</h1>
         </div>
@@ -25,18 +36,20 @@ class App extends Component {
             <input
               type="text"
               className={st('inputStyle')}
-              onSubmit={this.handlePw}
+              onChange={this.handleId}
             />
-            <h3>PASS</h3>
+            <h3>PASS:</h3>
             <input
               type="text"
               className={st('inputStyle')}
-              onSubmit={this.handleLogin}
+              onChange={this.handlePw}
             />
-            <button className={st('buttonStyle')}>로그인하기</button>
+            <button className={st('buttonStyle')} type="submit">
+              로그인하기
+            </button>
           </form>
         </div>
-      </>
+      </div>
     );
   }
 }
