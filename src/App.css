@@ -3,7 +3,6 @@
   flex-direction:column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
 }
 .header {
   background: green;
@@ -23,7 +22,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
   border:2px solid orange;
   border-radius: 10px;
   width: 250px;
@@ -33,6 +31,7 @@
   display: inline-block;
   width: 100%;
   height: auto;
+  background-color: red;
 }
 .inputStyle {
   width: 90%;
@@ -45,3 +44,4 @@
   width: 90%;
   margin-top:30px;
 }
+
