@@ -1,10 +1,22 @@
-
 .pad {
   display:flex;
   flex-direction:column;
   align-items: center;
   justify-content: center;
   /* text-align: center; */
+}
+.header {
+  background: green;
+  width: 50%;
+  margin-top: 10px;
+  height: 60px;
+}
+.h4 {
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  line-height: 10px;
+  padding-right: 20px;
 } 
 .wrap {
   display:flex;
@@ -13,6 +25,7 @@
   justify-content: center;
   /* text-align: center; */
   border:2px solid orange;
+  border-radius: 10px;
   width: 250px;
   height: 300px;
 }

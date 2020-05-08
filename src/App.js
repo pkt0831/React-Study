@@ -22,23 +22,28 @@ class App extends Component {
     e.preventDefault();
     // eslint-disable-next-line no-console
     console.log('로그인 시도중');
+    // eslint-disable-next-line no-alert
+    alert('로그인 시도!');
   };
 
   render() {
     return (
       <div className={st('pad')}>
+        <header className={st('header')}>
+          <h4 className={st('h4')}>로그인</h4>
+        </header>
         <div>
           <h1>로그인</h1>
         </div>
         <div className={st('wrap')}>
           <form classNAme={st('formStyle')} onSubmit={this.handleSubmit}>
-            <h2>ID:</h2>
+            <h2>아이디</h2>
             <input
               type="text"
               className={st('inputStyle')}
               onChange={this.handleId}
             />
-            <h3>PASS:</h3>
+            <h3>패스워드</h3>
             <input
               type="text"
               className={st('inputStyle')}
