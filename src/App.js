@@ -1,21 +1,21 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 const App = () => {
   const handleId = () => {
     // eslint-disable-next-line no-console
-    console.log('사용자 아이디 입력중');
+    console.log("사용자 아이디 입력중");
   };
   const handlePw = () => {
     // eslint-disable-next-line no-console
-    console.log('사용자 비밀번호 입력중');
+    console.log("사용자 비밀번호 입력중");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     // eslint-disable-next-line no-console
-    console.log('로그인 시도중');
+    console.log("로그인 시도중");
     // eslint-disable-next-line no-alert
-    alert('로그인 시도!');
+    alert("로그인 시도!");
   };
   return (
     <div className="pad">
