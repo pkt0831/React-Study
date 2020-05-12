@@ -7,11 +7,11 @@
 import React from "react";
 import "./Todo.css";
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, idx, changeActive, deleteTodo }) => {
   return (
     <div>
       <h3>
-        {todo._id}
+        {idx + 1}
         {":  "}
         {todo.title}
         {"   "}
@@ -20,10 +20,22 @@ const Todo = ({ todo }) => {
         ) : (
           <span className={"inactive"}>{"함"}</span>
         )}
-        <button className={"innerButton"} onKeyPress={"changeActive"}>
+        <button
+          className={"innerButton"}
+          onClick={() => {
+            changeActive(todo._id);
+          }}
+        >
           check
         </button>
-        <button className={"activeButton"}>X</button>
+        <button
+          className={"activeButton"}
+          onClick={() => {
+            deleteTodo(todo._id);
+          }}
+        >
+          X
+        </button>
       </h3>
     </div>
   );
