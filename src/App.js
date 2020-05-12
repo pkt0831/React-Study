@@ -77,7 +77,7 @@ const App = () => {
     <div className="pad">
       <div>
         <Header isLgoin={isLogin} id={loginId} logout={logout} />
-        {isLogin ? (
+        {/* {isLogin ? (
           <Todo />
         ) : (
           <Login
@@ -85,12 +85,9 @@ const App = () => {
             handleUserAcount={handleUserAcount}
             userState={userState}
           />
-        )}
+        )} */}
       </div>
-      <header className="header">
-        <h4 className="h4">로그인요망</h4>
-      </header>
-      <div>
+      <div className="h1">
         <h1>로그인</h1>
       </div>
       <div className="wrap">

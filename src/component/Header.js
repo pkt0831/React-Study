@@ -5,7 +5,11 @@ import React from "react";
 import "./Header.css";
 
 const Header = (isLogin, id, logout) => {
-  return <div>123</div>;
+  return (
+    <header className="header">
+      <h4 className="h4">로그인요망</h4>
+    </header>
+  );
 };
 
 export default Header;
