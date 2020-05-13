@@ -1,0 +1,35 @@
+.board {
+  background: green;
+  border-radius: 30px;
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 30px;
+}
+.boardInput {
+  border:none;
+  border-bottom: 3px solid gray;
+  width: 200px;
+  font-size: 17px;
+}
+.todayInfo {
+  border: 2px solid green;
+  box-shadow: 5px 5px 0 0 green;
+  border-radius: 10px;
+  width: 25%;
+  height: 300px;
+}
+.tomorrowInfo {
+  border: 2px solid green;
+  box-shadow: 5px 5px 0 0 green;
+  border-radius: 10px;
+  width: 25%;
+  height: 300px;
+}
+.todayInfo > li {
+  list-style: none;
+}
+.tomorrowInfo > li {
+  list-style: none;
+}
