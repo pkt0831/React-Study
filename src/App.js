@@ -6,6 +6,8 @@
 import React, { useState, userRef } from "react";
 import "./App.css";
 import Header from "./component/Header";
+// import Todo from "./component/Todo";
+// import Login from "./component/Login";
 
 const App = () => {
   const [headerState, setHeaderState] = useState({
@@ -57,6 +59,7 @@ const App = () => {
       password: "",
     });
   };
+  const Todo = () => {};
   const handleUserAcount = () => {
     setHeaderState({
       // isLogin: true,
