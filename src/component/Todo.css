@@ -27,9 +27,24 @@
   width: 25%;
   height: 300px;
 }
-.todayInfo > li {
+.todayInfo > ul >li {
   list-style: none;
 }
-.tomorrowInfo > li {
+.tomorrowInfo > ul >li {
   list-style: none;
+}
+.todoWrap > ul > li {
+  list-style: none;
+}
+.deleteMenu, .addMenu {
+  border: 1px solid brown;
+  border-radius: 5px;
+  background: brown;
+  width: 80%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+.addMenu {
+  margin-left: 25px;
 }

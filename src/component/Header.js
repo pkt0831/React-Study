@@ -4,10 +4,17 @@
 import React from "react";
 import "./Header.css";
 
-const Header = (isLogin, id, logout) => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ isLogin, id, logout }) => {
+  const userId = id;
+  console.log(isLogin, id);
   return (
     <header className="header">
-      <h4 className="h4">로그인요망</h4>
+      {isLogin ? (
+        <h4 className="h4">{userId}</h4>
+      ) : (
+        <h4 className="h4">로그인요망</h4>
+      )}
     </header>
   );
 };

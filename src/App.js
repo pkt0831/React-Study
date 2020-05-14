@@ -6,14 +6,15 @@
 import React, { useState, userRef } from "react";
 import "./App.css";
 import Header from "./component/Header";
-// import Todo from "./component/Todo";
-// import Login from "./component/Login";
+import Todo from "./component/Todo";
 
 const App = () => {
   const [headerState, setHeaderState] = useState({
     isLogin: false,
     loginId: "",
   });
+  // const idRef = useRef();
+  // const pwRef = useRef();
   const { isLogin, loginId } = headerState;
   const [state, setState] = useState([
     { _id: 0, id: "pkt0831", password: "1234" },
@@ -59,7 +60,6 @@ const App = () => {
       password: "",
     });
   };
-  const Todo = () => {};
   const handleUserAcount = () => {
     setHeaderState({
       // isLogin: true,
@@ -76,34 +76,46 @@ const App = () => {
       password: "",
     });
   };
+  console.log(isLogin);
   return (
     <div className="pad">
       <div>
-        <Header isLgoin={isLogin} id={loginId} logout={logout} />
-        {/* {isLogin ? (
-          <Todo />
-        ) : (
-          <Login
-            handleLogin={handleLogin}
-            handleUserAcount={handleUserAcount}
-            userState={userState}
-          />
-        )} */}
+        <Header isLogin={isLogin} id={loginId} logout={logout} />
       </div>
-      <div className="h1">
-        <h1>로그인</h1>
-      </div>
-      <div className="wrap">
-        <form className="formStyle" onSubmit={handleSubmit}>
-          <h2>아이디</h2>
-          <input type="text" className="inputStyle" onChange={handleId} />
-          <h3>패스워드</h3>
-          <input type="text" className="inputStyle" onChange={handlePw} />
-          <button className="buttonStyle" type="submit" onClick={handleLogin}>
-            로그인하기
-          </button>
-        </form>
-      </div>
+      {isLogin ? (
+        <Todo />
+      ) : (
+        <>
+          <div className="h1">
+            <h1>로그인</h1>
+          </div>
+          <div className="wrap">
+            <form className="formStyle" onSubmit={handleSubmit}>
+              <h2>아이디</h2>
+              <input
+                type="text"
+                className="inputStyle"
+                onChange={handleId}
+                // ref={idRef}
+              />
+              <h3>패스워드</h3>
+              <input
+                type="text"
+                className="inputStyle"
+                onChange={handlePw}
+                // ref={pwRef}
+              />
+              <button
+                className="buttonStyle"
+                type="submit"
+                onClick={handleLogin}
+              >
+                로그인하기
+              </button>
+            </form>
+          </div>
+        </>
+      )}
     </div>
   );
 };
